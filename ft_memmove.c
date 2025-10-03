@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akolomii <akolomii@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/01 14:11:12 by akolomii          #+#    #+#             */
-/*   Updated: 2025/10/01 14:13:25 by akolomii         ###   ########.fr       */
+/*   Created: 2025/10/02 14:39:17 by akolomii          #+#    #+#             */
+/*   Updated: 2025/10/02 14:39:20 by akolomii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	*ft_memmove(void *dest, const void *src, int n)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+
 }

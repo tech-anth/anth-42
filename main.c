@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akolomii <akolomii@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/01 14:11:12 by akolomii          #+#    #+#             */
-/*   Updated: 2025/10/01 14:13:25 by akolomii         ###   ########.fr       */
+/*   Created: 2025/10/02 14:21:45 by akolomii          #+#    #+#             */
+/*   Updated: 2025/10/02 14:21:48 by akolomii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+int	main(void)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
+    printf("%d\n", ft_isalpha('a'));
+    printf("%d\n", ft_strlen("Hello, dear"));
 	return (0);
 }
