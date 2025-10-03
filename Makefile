@@ -3,8 +3,9 @@ AR = ar
 NAME = libft.a
 
 ARFLAGS = rcs
-CFLAGS = -std=c99 -Wall -Wextra -Werror -Wpedantic
+CFLAGS = -Wall -Wextra -Werror -Wpedantic
 CPPFLAGS = -I./
+# Part 1
 
 SRC :=  ft_isalpha.c \
 	ft_isdigit.c \
@@ -16,9 +17,9 @@ SRC :=  ft_isalpha.c \
 	ft_memset.c \
 	ft_bzero.c \
 	ft_memcpy.c \
-#	ft_memmove.c \
-#	ft_strlcpy.c \
-#	strlcat.c \
+	ft_memmove.c \
+	ft_strlcpy.c \
+	ft_strlcat.c \
 #	ft_toupper.c \
 #	ft_tolower.c \
 #	ft_strchr.c \
@@ -35,6 +36,7 @@ SRC :=  ft_isalpha.c \
 #	ft_strtrim.c \
 #	ft_split.c \
 #	ft_itoa.c \
+# Part 2
 #	ft_strmapi.c \
 #	ft_striteri.c \
 #	ft_putchar_fd.c \

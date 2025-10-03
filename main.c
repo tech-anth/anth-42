@@ -14,7 +14,10 @@
 
 int	main(void)
 {
-    printf("%d\n", ft_isalpha('a'));
-    printf("%d\n", ft_strlen("Hello, dear"));
+	char dest[30] = "Konichiwa, cha-cha-cha!";
+	const char src[20] = "Hello!";
+	printf("variable src before ft_strlcat(): %s\n", src);
+	int l = ft_strlcat(dest, src, 10);
+	printf("variable dest after ft_strlcat(): %s, Length = %d\n", dest, l);
 	return (0);
 }
