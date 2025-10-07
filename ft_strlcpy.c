@@ -10,18 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlcpy(char *dest, const char *src, int n)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	int		i;
+	size_t		i;
 
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (i + 1 < n && src[i] != '\0')
+	if (size != 0)
 	{
-		dest[i] = src[i];
-		i++;
+		while (i < size - 1 && src[i] != '\0')
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
 	}
-	dest[i] = '\0';
-	return (i);
+
+	return (ft_strlen((char *) src));
 }

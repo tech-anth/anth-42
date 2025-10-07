@@ -14,15 +14,15 @@
 
 void	*ft_memcpy(void *dest, const void *src, int n)
 {
-	int					i;
+	int				i;
 	unsigned char		*d;
 	const unsigned char	*s;
 
 	if (!dest && !src)
 		return (NULL);
-	i = 0;
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
+	i = 0;
 	while (i < n)
 	{
 		d[i] = s[i];
