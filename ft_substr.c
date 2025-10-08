@@ -1,27 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akolomii <akolomii@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 11:48:49 by akolomii          #+#    #+#             */
-/*   Updated: 2025/10/07 11:52:04 by akolomii         ###   ########.fr       */
+/*   Created: 2025/10/08 12:55:48 by akolomii          #+#    #+#             */
+/*   Updated: 2025/10/08 12:57:09 by akolomii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char *ft_strrchr(const char *str, int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	length;
 
-	length = ft_strlen((char *) str);
-	while (length >= 0)
-	{
-		if ((unsigned char) str[length] == (unsigned char) c)
-			return ((char *) &str[length]);
-	length--;
-	}
-	return (NULL);
 }
