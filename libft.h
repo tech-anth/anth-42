@@ -43,12 +43,12 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
-//	ft_substr
-//	ft_strjoin
-//	ft_strtrim
-//	ft_split
-//	ft_itoa
 // Part 2
+char	*ft_substr(const char *s, unsigned int start, size_t len);
+char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strtrim(const char *s1, const char *set);
+char	**ft_split(const char *s, char c);
+char	*ft_itoa(int n);
 //	ft_strmapi
 //	ft_striteri
 //	ft_putchar_fd

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akolomii <akolomii@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/08 12:55:48 by akolomii          #+#    #+#             */
-/*   Updated: 2025/10/08 12:57:09 by akolomii         ###   ########.fr       */
+/*   Created: 2025/10/11 17:37:51 by akolomii          #+#    #+#             */
+/*   Updated: 2025/10/11 17:38:22 by akolomii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,25 +21,31 @@ static char	*handle_error(void)
 	return (str);
 }
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+static size_t	protected_len(const char *s)
 {
-	size_t	i;
-	char	*sub_str;
+	if (s)
+		return (ft_strlen(s));
+	else
+		return (0);
+}
 
-	if (!s)
+char	*ft_strjoin(const char *s1, const char *s2)
+{
+	size_t	lens1;
+	size_t	lens2;
+	char	*str;
+
+	if (!s1 && !s2)
 		return (handle_error());
-	i = 0;
-	sub_str = (char *)malloc(sizeof(char) * (len + 1));
-	if (!sub_str)
+	lens1 = protected_len(s1);
+	lens2 = protected_len(s2);
+	str = (char *)malloc(sizeof(char) * (lens1 + lens2 + 1));
+	if (!str)
 		return (NULL);
-	if (ft_strlen(s) <= start)
-	{
-		return (handle_error());
-	}
-	while (s[start] != '\0' && i < len)
-	{
-		sub_str[i++] = s[start++];
-	}
-	sub_str[i] = '\0';
-	return (sub_str);
+	if (s1)
+		ft_memcpy(str, s1, lens1);
+	if (s2)
+		ft_memcpy(str + lens1, s2, lens2);
+	str[lens1 + lens2] = '\0';
+	return (str);
 }
