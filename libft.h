@@ -6,7 +6,7 @@
 /*   By: akolomii <akolomii@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 09:35:25 by akolomii          #+#    #+#             */
-/*   Updated: 2025/10/13 18:34:50 by akolomii         ###   ########.fr       */
+/*   Updated: 2025/10/13 19:54:39 by akolomii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void ft_striteri(char const *s, void (*f)(unsigned int i, char*));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
-//	ft_putendl_fd
-//	ft_putnbr_fd
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 #endif
