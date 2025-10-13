@@ -21,7 +21,7 @@ static char	*handle_error(void)
 	return (str);
 }
 
-static size_t	protected_len(const char *s)
+static size_t	protected_len(char const *s)
 {
 	if (s)
 		return (ft_strlen(s));
@@ -29,7 +29,7 @@ static size_t	protected_len(const char *s)
 		return (0);
 }
 
-char	*ft_strjoin(const char *s1, const char *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	lens1;
 	size_t	lens2;

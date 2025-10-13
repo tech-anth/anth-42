@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int	count_words(const char *s, const char c)
+static int	count_words(char const *s, char c)
 {
 	size_t	i;
 	size_t	cnt;
@@ -32,7 +32,7 @@ static int	count_words(const char *s, const char c)
 	return (cnt);
 }
 
-static char	*ft_strndup(const char *str, const size_t n)
+static char	*ft_strndup(char const *str, const size_t n)
 {
 	size_t	i;
 	char	*dup;
@@ -58,7 +58,7 @@ static void	*free_split(char **arr, size_t used)
 	return (NULL);
 }
 
-static char	**handle_split(const char *s, const char c,
+static char	**handle_split(char const *s, char c,
 							size_t cnt_words, size_t i)
 {
 	size_t	split_index;
@@ -88,7 +88,7 @@ static char	**handle_split(const char *s, const char c,
 	return (split);
 }
 
-char	**ft_split(const char *s, const char c)
+char	**ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	cnt_words;
