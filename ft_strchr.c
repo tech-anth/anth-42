@@ -6,7 +6,7 @@
 /*   By: akolomii <akolomii@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 13:30:42 by akolomii          #+#    #+#             */
-/*   Updated: 2025/10/05 13:44:02 by akolomii         ###   ########.fr       */
+/*   Updated: 2025/10/16 08:10:18 by anth             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(char const *s, int c)
 			return ((char *) &s[i]);
 		i++;
 	}
-	if (c == '\0')
+	if ((unsigned char) c == '\0')
 		return ((char *) &s[i]);
 	return (NULL);
 }

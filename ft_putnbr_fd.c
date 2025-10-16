@@ -6,7 +6,7 @@
 /*   By: akolomii <akolomii@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 19:37:16 by akolomii          #+#    #+#             */
-/*   Updated: 2025/10/13 20:03:30 by akolomii         ###   ########.fr       */
+/*   Updated: 2025/10/14 21:15:27 by anth             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,19 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	if (n < 0)
+	long	nb;
+
+	nb = (long) n;
+	if (nb < 0)
 	{
-		n = -n;
+		nb = -nb;
 		ft_putchar_fd('-', fd);
 	}
-	if (n > 9)
+	if (nb > 9)
 	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putnbr_fd(nb % 10, fd);
 	}
 	else
-		ft_putchar_fd(n + '0', fd);
+		ft_putchar_fd(nb + '0', fd);
 }

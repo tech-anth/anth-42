@@ -6,7 +6,7 @@
 /*   By: akolomii <akolomii@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 20:17:47 by akolomii          #+#    #+#             */
-/*   Updated: 2025/10/12 20:20:04 by akolomii         ###   ########.fr       */
+/*   Updated: 2025/10/16 08:27:18 by anth             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ static int	count_words(char const *s, char c)
 	cnt = 0;
 	while (s[i] != '\0')
 	{
-		while (s[i] == c)
+		while (s[i] != '\0' && s[i] == c)
 			i++;
 		if (s[i] == '\0')
 			break ;
 		cnt++;
-		while (s[i] != c)
+		while (s[i] != '\0' && s[i] != c)
 			i++;
 	}
 	return (cnt);
@@ -80,7 +80,7 @@ static char	**handle_split(char const *s, char c,
 			len++;
 		split[split_index] = ft_strndup(&s[i], len);
 		if (!split[split_index])
-			free_split(split, split_index);
+			return (free_split(split, split_index));
 		split_index++;
 		i += len;
 	}
