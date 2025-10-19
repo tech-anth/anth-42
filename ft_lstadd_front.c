@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akolomii <akolomii@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/01 14:15:41 by akolomii          #+#    #+#             */
-/*   Updated: 2025/10/01 14:38:28 by akolomii         ###   ########.ch       */
+/*   Created: 2025/10/19 13:03:44 by akolomii          #+#    #+#             */
+/*   Updated: 2025/10/19 13:26:59 by akolomii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char const *str)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	if (!new)
+		return ;
+	if (!lst)
+	{
+		lst[0] = new;
+		return ;
+	}
+	new->next = lst[0];
+	lst[0] = new;
 }
