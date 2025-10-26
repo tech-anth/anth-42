@@ -6,7 +6,7 @@
 /*   By: akolomii <akolomii@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 13:49:41 by akolomii          #+#    #+#             */
-/*   Updated: 2025/10/19 14:01:53 by akolomii         ###   ########.fr       */
+/*   Updated: 2025/10/26 15:42:04 by anth             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*tmp;
 
-	if (!new)
+	if (!new && !lst)
 		return ;
 	if (!*lst)
 	{
